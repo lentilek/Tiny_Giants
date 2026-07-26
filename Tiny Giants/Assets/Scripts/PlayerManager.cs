@@ -77,6 +77,11 @@ public class PlayerManager : MonoBehaviour
                 gnomePieces++;
                 UIManager.Instance.UpdateGnomePieces();
             }
+            else if (gnomePieces > 0 && other.gameObject.tag == "Gate")
+            {
+                other.GetComponent<BoxCollider>().enabled = false;
+                // OpenGate()
+            }
         }
     }
 }

@@ -1,8 +1,10 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gnomeCounter;
 
     [SerializeField] private GameObject pauseUI;
+    [SerializeField] private Image bs;
+    [SerializeField] private float bsTime, bTime;
 
     private void Awake()
     {
@@ -25,6 +29,7 @@ public class UIManager : MonoBehaviour
         }
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
+        BlackScreenOut(bsTime);
     }
 
     private void Update()
@@ -41,6 +46,34 @@ public class UIManager : MonoBehaviour
                 pauseUI.SetActive(true);
             }
         }
+    }
+
+    public void BlackScreenOut(float time)
+    {
+        StartCoroutine(BlackScreenRoutineOut(time));
+    }
+
+    private IEnumerator BlackScreenRoutineOut(float time)
+    {
+        bs.DOFade(1, 0.01f);
+        bs.gameObject.SetActive(true);
+        yield return new WaitForSeconds(bTime);
+        bs.DOFade(0, time);
+        yield return new WaitForSeconds(time);
+        bs.gameObject.SetActive(false);
+    }
+
+    public void BlackScreenIn(float time)
+    {
+        StartCoroutine(BlackScreenRoutineIn(time));
+    }
+
+    private IEnumerator BlackScreenRoutineIn(float time)
+    {
+        bs.gameObject.SetActive(true);
+        bs.DOFade(1, time);
+        yield return new WaitForSeconds(time);
+        BlackScreenOut(time);
     }
 
     public void Resume()

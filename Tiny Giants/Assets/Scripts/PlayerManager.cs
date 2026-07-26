@@ -12,6 +12,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private float playerSpeed;
     public Vector3 playerHomePoint;
 
+    [HideInInspector] public int gnomePieces;
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         //gameObject.transform.position = playerHomePoint;
+        gnomePieces = 0;
     }
 
     private void Update()
@@ -59,5 +62,17 @@ public class PlayerManager : MonoBehaviour
         }
 
         // idle state
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            if (other.gameObject.tag == "GnomePiece")
+            {
+                Destroy(other.gameObject);
+                gnomePieces++;
+            }
+        }
     }
 }

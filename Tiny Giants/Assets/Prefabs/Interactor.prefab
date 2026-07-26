@@ -69,9 +69,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textWindow: {fileID: 5536619571259926001}
   windowTXT: {fileID: 1596132844287635651}
-  initial: Hello! What a beautiful day!
-  after: Thank you for help!
-  other: I hate mondays...
+  initial:
+  - Hello friend!
+  - Hiii~
+  after:
+  - Thank you!
+  other:
+  - Ugh...
 --- !u!1 &5536619571259926001
 GameObject:
   m_ObjectHideFlags: 0

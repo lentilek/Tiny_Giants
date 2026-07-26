@@ -6,18 +6,20 @@ public class InteractionField : MonoBehaviour
     [SerializeField] private GameObject textWindow;
     [SerializeField] private TextMeshProUGUI windowTXT;
 
-    [SerializeField] private string initial, after, other;
+    [SerializeField] private string[] initial, after, other;
+    private int state;
 
     private void Awake()
     {
         textWindow.SetActive(false);
-        windowTXT.text = initial;
+        state = 0;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            RandomTXT();
             textWindow.SetActive(true);
         }
     }
@@ -32,11 +34,29 @@ public class InteractionField : MonoBehaviour
 
     public void AfterTXT()
     {
-        windowTXT.text = after;
+        state = 1;
     }
 
     public void OtherTXT()
     {
-        windowTXT.text = other;
+        state = 2;
+    }
+
+    private void RandomTXT()
+    {
+        switch(state)
+        {
+            case 0:
+                windowTXT.text = initial[Random.Range(0, initial.Length)];
+                break;
+            case 1:
+                windowTXT.text = after[Random.Range(0, initial.Length)];
+                break;
+            case 2:
+                windowTXT.text = other[Random.Range(0, initial.Length)];
+                break;
+            default:
+                break;
+        }
     }
 }

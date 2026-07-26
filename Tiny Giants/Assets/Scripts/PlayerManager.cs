@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     public Vector3 playerHomePoint;
 
     [HideInInspector] public int gnomePieces;
+    public int allGnomePieces;
 
     private void Awake()
     {
@@ -26,11 +27,13 @@ public class PlayerManager : MonoBehaviour
             Instance = this;
         }
     }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         //gameObject.transform.position = playerHomePoint;
         gnomePieces = 0;
+        UIManager.Instance.UpdateGnomePieces();
     }
 
     private void Update()
@@ -72,6 +75,7 @@ public class PlayerManager : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 gnomePieces++;
+                UIManager.Instance.UpdateGnomePieces();
             }
         }
     }

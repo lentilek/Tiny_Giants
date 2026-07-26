@@ -69,7 +69,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (other.gameObject.tag == "GnomePiece")
             {

@@ -10,6 +10,8 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private InteractionField[] interactionFields;
     [SerializeField] private GameObject gate;
 
+    [HideInInspector] public bool inDialogue, canManipulate;
+
     private void Awake()
     {
         if (Instance == null)
@@ -21,6 +23,8 @@ public class InteractionManager : MonoBehaviour
             Destroy(Instance.gameObject);
             Instance = this;
         }
+        inDialogue = false;
+        canManipulate = false;
     }
 
     public void Interaction0()

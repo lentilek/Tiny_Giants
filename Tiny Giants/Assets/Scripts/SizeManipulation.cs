@@ -17,7 +17,7 @@ public class SizeManipulation : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (InteractionManager.Instance.canManipulate && other.gameObject.tag == "Player")
         {
             if (Input.GetKey(KeyCode.E) && currentSize <= maxSize)
             {

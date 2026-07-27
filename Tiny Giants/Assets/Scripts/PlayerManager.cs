@@ -41,41 +41,43 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {        
         animator.SetBool("isWalking", false);
-
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (!InteractionManager.Instance.inDialogue)
         {
-            transform.position += Vector3.right * playerSpeed * Time.deltaTime;
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.position += Vector3.right * playerSpeed * Time.deltaTime;
 
-            charSprite.flipX = true;
-            animator.SetBool("isWalking", true);
-        }
-        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.position -= Vector3.right * playerSpeed * Time.deltaTime;
+                charSprite.flipX = true;
+                animator.SetBool("isWalking", true);
+            }
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                transform.position -= Vector3.right * playerSpeed * Time.deltaTime;
 
-            charSprite.flipX = true;
-            animator.SetBool("isWalking", true);
-        }
+                charSprite.flipX = true;
+                animator.SetBool("isWalking", true);
+            }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.forward * playerSpeed * Time.deltaTime;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.position += Vector3.forward * playerSpeed * Time.deltaTime;
 
-            charSprite.flipX = true;
-            animator.SetBool("isLeft", false);
-            animator.SetBool("isWalking", true);
+                charSprite.flipX = true;
+                animator.SetBool("isLeft", false);
+                animator.SetBool("isWalking", true);
 
-            // sprite front
-        }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.back * playerSpeed * Time.deltaTime;
+                // sprite front
+            }
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.position += Vector3.back * playerSpeed * Time.deltaTime;
 
-            charSprite.flipX = true;
-            animator.SetBool("isLeft", true);
-            animator.SetBool("isWalking", true);
+                charSprite.flipX = true;
+                animator.SetBool("isLeft", true);
+                animator.SetBool("isWalking", true);
 
-            // sprite back
+                // sprite back
+            }
         }
 
         // idle state

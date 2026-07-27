@@ -4,7 +4,7 @@ using UnityEngine;
 public class InteractionField : MonoBehaviour
 {
     [SerializeField] private GameObject textWindow;
-    [SerializeField] private TextMeshProUGUI windowTXT;
+    [SerializeField] public TextMeshProUGUI windowTXT;
 
     [SerializeField] private string[] initial, after, other;
     private int state;
@@ -15,7 +15,7 @@ public class InteractionField : MonoBehaviour
 
     private void Awake()
     {
-        textWindow.SetActive(false);
+        if (interactionType == 0) textWindow.SetActive(false);
         state = 0;
     }
 

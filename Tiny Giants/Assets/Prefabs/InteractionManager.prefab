@@ -46,3 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionFields:
   - {fileID: 0}
+  - {fileID: 0}
+  gate: {fileID: 0}
+  inDialogue: 0
+  canManipulate: 0

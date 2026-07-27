@@ -5011,18 +5011,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1171739421}
     m_Modifications:
-    - target: {fileID: 2898398039426192814, guid: d69d8a90416a0c948a841aa25249c217, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898398039426192814, guid: d69d8a90416a0c948a841aa25249c217, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898398039426192814, guid: d69d8a90416a0c948a841aa25249c217, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -45
-      objectReference: {fileID: 0}
     - target: {fileID: 3287379015102017949, guid: d69d8a90416a0c948a841aa25249c217, type: 3}
       propertyPath: m_Name
       value: Gate

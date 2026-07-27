@@ -64,7 +64,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.04
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -167,7 +167,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.19, z: 0.3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.1, y: 0.1, z: 0}
 --- !u!54 &187383728591617742
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.19, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.1, y: 0.1, z: 0}
 --- !u!1 &7678342973474228788
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 06a8cf6406a38f647a6383c21250ba24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &9060706174720031437
 Animator:
   serializedVersion: 5

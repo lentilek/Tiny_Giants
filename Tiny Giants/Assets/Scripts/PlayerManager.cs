@@ -107,10 +107,12 @@ public class PlayerManager : MonoBehaviour
                 Destroy(other.gameObject);
                 gnomePieces++;
                 UIManager.Instance.UpdateGnomePieces();
+                if (gnomePieces == 1) InteractionManager.Instance.Interaction0();
             }
             else if (gnomePieces > 0 && other.gameObject.tag == "Gate")
             {
-                other.GetComponent<BoxCollider>().enabled = false;
+                //other.GetComponent<BoxCollider>().enabled = false;
+                InteractionManager.Instance.Interaction1();
                 // OpenGate()
             }
         }

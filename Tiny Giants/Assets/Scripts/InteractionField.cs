@@ -11,6 +11,8 @@ public class InteractionField : MonoBehaviour
 
     [SerializeField] private bool noChanges = false;
 
+    [SerializeField] private int interactionType = 0;
+
     private void Awake()
     {
         textWindow.SetActive(false);
@@ -44,7 +46,7 @@ public class InteractionField : MonoBehaviour
         state = 2;
     }
 
-    private void RandomTXT()
+    public void RandomTXT()
     {
         switch(state)
         {

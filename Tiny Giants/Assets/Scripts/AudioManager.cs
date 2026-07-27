@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     [HideInInspector] public AudioSource audioSrc;
 
-    [SerializeField] private AudioClip[] steps, collect, npc, click, scale, puzzle;
+    [SerializeField] private AudioClip[] steps, collect, npc, click, scale, puzzle, glowstick, alarm, snore;
 
     private void Awake()
     {
@@ -29,22 +29,31 @@ public class AudioManager : MonoBehaviour
         switch (clip)
         {
             case "steps":
-                audioSrc.PlayOneShot(steps[Random.Range(0, steps.Length)]);
+                audioSrc.PlayOneShot(steps[Random.Range(0, steps.Length)], 2f); // done
                 break;
             case "collect":
-                audioSrc.PlayOneShot(steps[Random.Range(0, collect.Length)]);
+                audioSrc.PlayOneShot(collect[Random.Range(0, collect.Length)], .5f); // done
                 break;
             case "npc":
-                audioSrc.PlayOneShot(steps[Random.Range(0, npc.Length)]);
+                audioSrc.PlayOneShot(npc[Random.Range(0, npc.Length)]);
                 break;
             case "click":
-                audioSrc.PlayOneShot(steps[Random.Range(0, click.Length)]);
+                audioSrc.PlayOneShot(click[Random.Range(0, click.Length)], 0.5f); // done
                 break;
             case "scale":
-                audioSrc.PlayOneShot(steps[Random.Range(0, scale.Length)]);
+                audioSrc.PlayOneShot(scale[Random.Range(0, scale.Length)], 2f); // done
                 break;
             case "puzzle":
-                audioSrc.PlayOneShot(steps[Random.Range(0, puzzle.Length)]);
+                audioSrc.PlayOneShot(puzzle[Random.Range(0, puzzle.Length)]);
+                break;
+            case "glowstick":
+                audioSrc.PlayOneShot(glowstick[Random.Range(0, glowstick.Length)]);
+                break;
+            case "alarm":
+                audioSrc.PlayOneShot(alarm[Random.Range(0, alarm.Length)]);
+                break;
+            case "snore":
+                audioSrc.PlayOneShot(snore[Random.Range(0, snore.Length)]);
                 break;
             default:
                 break;

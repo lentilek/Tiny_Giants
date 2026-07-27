@@ -980,6 +980,7 @@ MonoBehaviour:
   minSize: 0.5
   maxSize: 1
   scale: 0.01
+  scaleInterval: 0.8
   number: 1
   currentSize: 1
 --- !u!135 &7733350301260743938
@@ -1542,6 +1543,7 @@ MonoBehaviour:
   minSize: 0.5
   maxSize: 1
   scale: 0.01
+  scaleInterval: 0.8
   number: 3
   currentSize: 1
 --- !u!135 &4984887207476140979
@@ -1657,6 +1659,7 @@ MonoBehaviour:
   minSize: 0.5
   maxSize: 1
   scale: 0.01
+  scaleInterval: 0.8
   number: 0
   currentSize: 1
 --- !u!135 &3228797923207480965
@@ -1822,6 +1825,7 @@ MonoBehaviour:
   minSize: 0.5
   maxSize: 1
   scale: 0.01
+  scaleInterval: 0.8
   number: 2
   currentSize: 1
 --- !u!135 &7291211797121387889

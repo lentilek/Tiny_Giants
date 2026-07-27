@@ -9,7 +9,8 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private SpriteRenderer charSprite;
     [SerializeField] private Animator animator;
-    [SerializeField] private float playerSpeed;
+    [SerializeField] private float playerSpeed, stepsInterval;
+    private bool isBreak;
     public Vector3 playerHomePoint;
 
     [HideInInspector] public int gnomePieces;
@@ -26,6 +27,7 @@ public class PlayerManager : MonoBehaviour
             Destroy(Instance.gameObject);
             Instance = this;
         }
+        isBreak = false;
     }
 
     private void Start()
@@ -85,14 +87,23 @@ public class PlayerManager : MonoBehaviour
         {
             charSprite.flipX = true;
         }
+
+        if (animator.GetBool("isWalking"))
+        {
+            if (!isBreak)
+            {
+                StartCoroutine(PlaySteps());
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (other.gameObject.tag == "GnomePiece")
             {
+                AudioManager.Instance.PlayAudio("collect");
                 Destroy(other.gameObject);
                 gnomePieces++;
                 UIManager.Instance.UpdateGnomePieces();
@@ -103,5 +114,13 @@ public class PlayerManager : MonoBehaviour
                 // OpenGate()
             }
         }
+    }
+
+    IEnumerator PlaySteps()
+    {
+        isBreak = true;
+        AudioManager.Instance.PlayAudio("steps");
+        yield return new WaitForSeconds(stepsInterval);
+        isBreak = false;
     }
 }

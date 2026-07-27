@@ -5,12 +5,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
-public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler//IPointerDownHandler, IPointerUpHandler
+public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
 {
     private bool canManipulate, canMove;
-    [SerializeField] private float minSize, maxSize, scale;
+    [SerializeField] private float minSize, maxSize, scale, scaleInterval;
     public int number;
-    [HideInInspector] public float currentSize;
+    public float currentSize = 1;
+    private bool isBreak;
 
     private void Awake()
     {
@@ -22,18 +23,18 @@ public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (canManipulate)
         {
-            if (Input.GetKey(KeyCode.B) && currentSize <= maxSize)
+            if (Input.GetKey(KeyCode.E) && currentSize <= maxSize)
             {
-                //gameObject.transform.DOScale(currentSize, currentSize + scale);
                 gameObject.transform.DOScale(currentSize + scale, .01f);
                 currentSize += scale;
+                if (!isBreak) StartCoroutine(SizeSound());
                 if (currentSize > maxSize) currentSize = maxSize;
             }
-            else if (Input.GetKey(KeyCode.N) && currentSize >= minSize)
+            else if (Input.GetKey(KeyCode.Q) && currentSize >= minSize)
             {
-                //target.transform.DOScale(currentSize, currentSize - scale);
                 gameObject.transform.DOScale(currentSize + scale, .01f);
                 currentSize -= scale;
+                if (!isBreak) StartCoroutine(SizeSound());
                 if (currentSize < minSize) currentSize = minSize;
             }
         }
@@ -58,19 +59,16 @@ public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         canManipulate = false;
     }
 
-    /*public void OnPointerDown(PointerEventData eventData)
-    {
-        canManipulate = false;
-        transform.position = Input.mousePosition;
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        canManipulate = false;
-    }*/
-
     public void OnPointerMove(PointerEventData eventData)
     {
         if (canMove) transform.position = Input.mousePosition;
+    }
+
+    IEnumerator SizeSound()
+    {
+        isBreak = true;
+        AudioManager.Instance.PlayAudio("scale");
+        yield return new WaitForSeconds(scaleInterval);
+        isBreak = false;
     }
 }

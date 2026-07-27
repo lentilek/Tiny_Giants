@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!bs.gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape))
         {
             if (pauseUI.activeSelf)
             {
@@ -78,12 +78,14 @@ public class UIManager : MonoBehaviour
 
     public void Resume()
     {
+        AudioManager.Instance.PlayAudio("click");
         Time.timeScale = 1f;
         pauseUI.SetActive(false);
     }
 
     public void Menu()
     {
+        AudioManager.Instance.PlayAudio("click");
         SceneManager.LoadScene(0);
     }
 

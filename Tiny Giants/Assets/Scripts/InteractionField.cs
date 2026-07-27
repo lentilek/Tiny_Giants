@@ -9,6 +9,8 @@ public class InteractionField : MonoBehaviour
     [SerializeField] private string[] initial, after, other;
     private int state;
 
+    [SerializeField] private bool noChanges = false;
+
     private void Awake()
     {
         textWindow.SetActive(false);
@@ -19,7 +21,7 @@ public class InteractionField : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            RandomTXT();
+            if (!noChanges) RandomTXT();
             textWindow.SetActive(true);
         }
     }

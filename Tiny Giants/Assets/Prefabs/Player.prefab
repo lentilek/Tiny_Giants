@@ -189,6 +189,7 @@ MonoBehaviour:
   charSprite: {fileID: 6653675116525565456}
   animator: {fileID: 9060706174720031437}
   playerSpeed: 0.65
+  stepsInterval: 0.4
   playerHomePoint: {x: 0, y: 0, z: 0}
   gnomePieces: 0
   allGnomePieces: 6
@@ -211,7 +212,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.19, z: 0.3}
+  m_Size: {x: 0.3, y: 0.19, z: 0.3}
   m_Center: {x: -0.05, y: 0.1, z: 0}
 --- !u!54 &187383728591617742
 Rigidbody:

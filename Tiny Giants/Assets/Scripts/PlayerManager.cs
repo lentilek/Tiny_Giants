@@ -121,6 +121,10 @@ public class PlayerManager : MonoBehaviour
             {
                 MinigamesManager.Instance.Puzzle1Open();
             }
+            else if (gnomePieces == 6 && other.gameObject.tag == "Gnome")
+            {
+                MinigamesManager.Instance.Puzzle2Open();
+            }
         }
     }
 

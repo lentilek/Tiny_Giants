@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -25,6 +26,10 @@ public class InteractionField : MonoBehaviour
         {
             if (!noChanges) RandomTXT();
             textWindow.SetActive(true);
+            if (interactionType == 2)
+            {
+                StartCoroutine(End());
+            }
         }
     }
 
@@ -62,5 +67,11 @@ public class InteractionField : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    IEnumerator End()
+    {
+        yield return new WaitForSeconds(3f);
+        UIManager.Instance.EndGame();
     }
 }

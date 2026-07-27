@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI gnomeCounter;
 
-    [SerializeField] private GameObject pauseUI;
+    [SerializeField] private GameObject pauseUI, endingUI;
     [SerializeField] private Image bs;
     [SerializeField] private float bsTime, bTime;
 
@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
         pauseUI.SetActive(false);
+        endingUI.SetActive(false);
         Time.timeScale = 1f;
         BlackScreenOut(bsTime);
     }
@@ -74,6 +75,12 @@ public class UIManager : MonoBehaviour
         bs.DOFade(1, time);
         yield return new WaitForSeconds(time);
         BlackScreenOut(time);
+    }
+
+    public void EndGame()
+    {
+        Time.timeScale = 0f;
+        endingUI.SetActive(true);
     }
 
     public void Resume()

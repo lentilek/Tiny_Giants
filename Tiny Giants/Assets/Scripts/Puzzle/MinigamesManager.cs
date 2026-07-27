@@ -7,7 +7,7 @@ public class MinigamesManager : MonoBehaviour
 {
     public static MinigamesManager Instance;
 
-    [SerializeField] private PuzzleManager puzzle1;
+    [SerializeField] private PuzzleManager puzzle1, puzzle2;
     private void Awake()
     {
         if (Instance == null)
@@ -28,6 +28,13 @@ public class MinigamesManager : MonoBehaviour
         puzzle1.gameObject.SetActive(true);
     }
 
+    public void Puzzle2Open()
+    {
+        InteractionManager.Instance.inDialogue = true;
+        puzzle2.isActive = true;
+        puzzle2.gameObject.SetActive(true);
+    }
+
     public void FinishPuzzle(int number)
     {
         InteractionManager.Instance.inDialogue = false;
@@ -36,6 +43,11 @@ public class MinigamesManager : MonoBehaviour
             case 1:
                 InteractionManager.Instance.Interaction2();
                 AudioManager.Instance.PlayAudio("alarm");
+                break;
+            case 2:
+                AudioManager.Instance.PlayAudio("puzzle");
+                InteractionManager.Instance.inDialogue = true;
+                GnomeManager.Instance.StartLastDialogue();
                 break;
             default:
                 break;

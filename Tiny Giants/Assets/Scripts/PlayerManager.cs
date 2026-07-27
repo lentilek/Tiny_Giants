@@ -113,7 +113,7 @@ public class PlayerManager : MonoBehaviour
             }
             else if (gnomePieces > 0 && other.gameObject.tag == "Gate")
             {
-                //other.GetComponent<BoxCollider>().enabled = false;
+                other.GetComponent<BoxCollider>().enabled = false;
                 InteractionManager.Instance.Interaction1();
                 // OpenGate()
             }

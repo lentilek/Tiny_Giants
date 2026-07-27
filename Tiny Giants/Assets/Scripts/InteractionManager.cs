@@ -34,7 +34,7 @@ public class InteractionManager : MonoBehaviour
     }
     public void Interaction1()
     {
-        gate.transform.DORotate(new Vector3(0,120,0), 1f);
+        gate.transform.DORotate(new Vector3(14,-22,-8), 1f);
         interactionFields[1].AfterTXT();
         interactionFields[1].RandomTXT();
     }

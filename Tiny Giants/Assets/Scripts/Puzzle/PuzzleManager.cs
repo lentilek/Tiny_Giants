@@ -8,6 +8,7 @@ public class PuzzleManager : MonoBehaviour
 
     [HideInInspector] public bool isActive;
     private bool puzzlesGood;
+    public int number;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class PuzzleManager : MonoBehaviour
 
     private void FinishPuzzle()
     {
+        MinigamesManager.Instance.FinishPuzzle(number);
         gameObject.SetActive(false);
     }
 }

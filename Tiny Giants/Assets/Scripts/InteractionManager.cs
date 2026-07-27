@@ -8,7 +8,7 @@ public class InteractionManager : MonoBehaviour
     public static InteractionManager Instance;
 
     [SerializeField] private InteractionField[] interactionFields;
-    [SerializeField] private GameObject gate;
+    [SerializeField] private GameObject gate, hedgehog;
 
     [HideInInspector] public bool inDialogue, canManipulate;
 
@@ -37,5 +37,11 @@ public class InteractionManager : MonoBehaviour
         gate.transform.DORotate(new Vector3(0,120,0), 1f);
         interactionFields[1].AfterTXT();
         interactionFields[1].RandomTXT();
+    }
+    public void Interaction2()
+    {
+        interactionFields[2].AfterTXT();
+        interactionFields[2].RandomTXT();
+        hedgehog.transform.DOMoveZ(-3, 10f);
     }
 }

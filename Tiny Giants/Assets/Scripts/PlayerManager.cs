@@ -117,6 +117,10 @@ public class PlayerManager : MonoBehaviour
                 InteractionManager.Instance.Interaction1();
                 // OpenGate()
             }
+            else if (other.gameObject.tag == "Clock")
+            {
+                MinigamesManager.Instance.Puzzle1Open();
+            }
         }
     }
 

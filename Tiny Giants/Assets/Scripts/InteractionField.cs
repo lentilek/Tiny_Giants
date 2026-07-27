@@ -54,10 +54,10 @@ public class InteractionField : MonoBehaviour
                 windowTXT.text = initial[Random.Range(0, initial.Length)];
                 break;
             case 1:
-                windowTXT.text = after[Random.Range(0, initial.Length)];
+                windowTXT.text = after[Random.Range(0, after.Length)];
                 break;
             case 2:
-                windowTXT.text = other[Random.Range(0, initial.Length)];
+                windowTXT.text = other[Random.Range(0, other.Length)];
                 break;
             default:
                 break;

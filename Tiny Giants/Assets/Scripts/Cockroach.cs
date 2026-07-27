@@ -7,17 +7,20 @@ public class Cockroach : MonoBehaviour
     [SerializeField] private InteractionField cockroach, player, cockroach2, cup;
     private int part;
     [SerializeField] private string[] strings;
+    private bool isWaiting;
     private void Awake()
     {
         part = 0;
+        isWaiting = false;
         cockroach.gameObject.SetActive(false);
         cockroach2.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
     }
     private void OnTriggerStay(Collider other)
     {
-        if (part == 0 && other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.F))
+        if (!isWaiting && part == 0 && other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.F))
         {
+            StartCoroutine(Wait());
             InteractionManager.Instance.inDialogue = true;
             part++;
             cockroach.gameObject.SetActive(true);
@@ -26,7 +29,7 @@ public class Cockroach : MonoBehaviour
 
     private void Update()
     {
-        if (InteractionManager.Instance.inDialogue && 
+        if (!isWaiting && InteractionManager.Instance.inDialogue && 
             (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.F)))
         {
             switch (part)
@@ -90,6 +93,8 @@ public class Cockroach : MonoBehaviour
 
     IEnumerator Wait()
     {
+        isWaiting = true;
         yield return new WaitForSeconds(1f);
+        isWaiting = false;
     }
 }

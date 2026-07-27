@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
                 audioSrc.PlayOneShot(glowstick[Random.Range(0, glowstick.Length)]);
                 break;
             case "alarm":
-                audioSrc.PlayOneShot(alarm[Random.Range(0, alarm.Length)]);
+                audioSrc.PlayOneShot(alarm[Random.Range(0, alarm.Length)], .5f); //done
                 break;
             case "snore":
                 audioSrc.PlayOneShot(snore[Random.Range(0, snore.Length)]);

@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3100416764260698887}
+  - {fileID: 5857760557545946381}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &977871403376188980
@@ -49,6 +50,7 @@ MonoBehaviour:
   gnome: {fileID: 0}
   player: {fileID: 0}
   endGame: {fileID: 0}
+  brokenGnome: {fileID: 4073811335358136552}
   strings:
   - Hi, umm, mister... God?
   - '[...]'
@@ -58,6 +60,8 @@ MonoBehaviour:
   - "So, I dunno, I\u2019m not saying I need a ''thank you'', but maybe some sign?"
   - '[...]'
   - "Or not, that\u2019s cool too, I guess. But I do hope you feel better now-"
+  fullGnome: {fileID: -1285946198, guid: 70fa563d823f9e14f8a3af69cc28d4fa, type: 3}
+  gnomeRenderer: {fileID: 8876886244918529666}
 --- !u!65 &9090715101304369875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,3 +167,124 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1001 &7543811760017746624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8586516979742039993}
+    m_Modifications:
+    - target: {fileID: 3319986156580456761, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_Name
+      value: Interactor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: initial.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: initial.Array.data[0]
+      value: This is Him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: initial.Array.data[1]
+      value: Looks like I've missed some piece.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: initial.Array.data[2]
+      value: I need all pieces.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: initial.Array.data[3]
+      value: He's huge.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: initial.Array.data[4]
+      value: Some pieces are missing.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004486369071492932, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004486369071492932, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219525699856328937, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219525699856328937, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219525699856328937, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219525699856328937, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: m_Center.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+--- !u!114 &4073811335358136552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+  m_PrefabInstance: {fileID: 7543811760017746624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4441f43239b4a6942b7e2f2d598f00a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5857760557545946381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+  m_PrefabInstance: {fileID: 7543811760017746624}
+  m_PrefabAsset: {fileID: 0}

@@ -12,7 +12,7 @@ public class PuzzleManager : MonoBehaviour
 
     private void Awake()
     {
-        isActive = false;
+        isActive = true;
         gameObject.SetActive(false);
     }
 
@@ -20,6 +20,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (isActive)
         {
+            int i = 0;
             puzzlesGood = true;
             foreach (var puzzle in puzzles)
             {
@@ -28,6 +29,7 @@ public class PuzzleManager : MonoBehaviour
                     puzzlesGood = false;
                     break;
                 }
+                i++;
             }
             if(puzzlesGood) FinishPuzzle();
         }

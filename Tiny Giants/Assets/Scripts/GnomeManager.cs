@@ -6,10 +6,12 @@ public class GnomeManager : MonoBehaviour
 {
     public static GnomeManager Instance;
 
-    [SerializeField] private InteractionField gnome, player, endGame;
+    [SerializeField] private InteractionField gnome, player, endGame, brokenGnome;
     private int part;
     [SerializeField] private string[] strings;
     private bool isWaiting;
+    [SerializeField] private Sprite fullGnome;
+    [SerializeField] private SpriteRenderer gnomeRenderer;
 
     private void Awake()
     {
@@ -87,6 +89,7 @@ public class GnomeManager : MonoBehaviour
 
     public void StartLastDialogue()
     {
+        gnomeRenderer.sprite = fullGnome;
         StartCoroutine(Wait());
         InteractionManager.Instance.inDialogue = true;
         part++;
@@ -102,7 +105,10 @@ public class GnomeManager : MonoBehaviour
         endGame.gameObject.SetActive(true);
         StartCoroutine(TeleportPlayer());
     }
-
+    public void AllPieces()
+    {
+        brokenGnome.gameObject.SetActive(false);
+    }
     IEnumerator TeleportPlayer()
     {
         UIManager.Instance.BlackScreenIn(1f);

@@ -110,6 +110,7 @@ public class PlayerManager : MonoBehaviour
                 gnomePieces++;
                 UIManager.Instance.UpdateGnomePieces();
                 if (gnomePieces == 1) InteractionManager.Instance.Interaction0();
+                if (gnomePieces == 6) GnomeManager.Instance.AllPieces();
             }
             else if (gnomePieces > 0 && other.gameObject.tag == "Gate")
             {

@@ -18,7 +18,7 @@ public class Cockroach : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (!isWaiting && part == 0 && other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.F))
+        if (!isWaiting && part == 0 && other.gameObject.tag == "Player" && Input.GetKey(KeyCode.F))
         {
             StartCoroutine(Wait());
             InteractionManager.Instance.inDialogue = true;
@@ -30,7 +30,7 @@ public class Cockroach : MonoBehaviour
     private void Update()
     {
         if (!isWaiting && InteractionManager.Instance.inDialogue && 
-            (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.F)))
+            (Input.GetMouseButton(0) || Input.GetKey(KeyCode.F)))
         {
             switch (part)
             {

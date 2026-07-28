@@ -51,13 +51,14 @@ public class GlowstickAndMoth : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.F))
+        if(other.gameObject.tag == "Player" && Input.GetKey(KeyCode.F))
         {
             BreakStick();
         }
     }
     public void BreakStick()
     {
+        AudioManager.Instance.PlayAudio("glowstick");
         spriteRenderer.sprite = glowing;
         isBroken = true;
         iStick.gameObject.SetActive(false);

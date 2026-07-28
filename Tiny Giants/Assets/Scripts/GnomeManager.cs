@@ -35,7 +35,7 @@ public class GnomeManager : MonoBehaviour
         if(part > 0)
         {
             if (!isWaiting && InteractionManager.Instance.inDialogue &&
-            (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.F)))
+            (Input.GetMouseButton(0) || Input.GetKey(KeyCode.F)))
             {
                 switch (part)
                 {

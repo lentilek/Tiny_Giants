@@ -506,6 +506,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: snoreInterval
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
+      propertyPath: interactionType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780393215328709160, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
       propertyPath: initial.Array.size
       value: 1
       objectReference: {fileID: 0}

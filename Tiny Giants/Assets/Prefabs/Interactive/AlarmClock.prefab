@@ -131,7 +131,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 215245621, guid: 1763a2514e3a3df42b47c0a57481e63f, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.32941177}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: -1539265273, guid: 1763a2514e3a3df42b47c0a57481e63f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -238,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3319986156580456761, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
       propertyPath: m_Name
-      value: Interactor
+      value: InteractorClock
       objectReference: {fileID: 0}
     - target: {fileID: 4178200137355777997, guid: 087c236e7ebe6eb479a972806898feef, type: 3}
       propertyPath: m_LocalPosition.x

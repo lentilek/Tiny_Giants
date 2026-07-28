@@ -179,6 +179,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59919fcc2ba62d24f9cb2b4672fb0e15, type: 3}
+--- !u!212 &26205559 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6606801716916069086, guid: 9c007943a291a87459a236d46ecd0e5c, type: 3}
+  m_PrefabInstance: {fileID: 9039109794650662049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &53476974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7715590015988086783, guid: 9c007943a291a87459a236d46ecd0e5c, type: 3}
+  m_PrefabInstance: {fileID: 9039109794650662049}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4441f43239b4a6942b7e2f2d598f00a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &58855182
 GameObject:
   m_ObjectHideFlags: 0
@@ -7451,7 +7467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.35
+      value: 7.4
       objectReference: {fileID: 0}
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7459,7 +7475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.28
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7532,7 +7548,7 @@ PrefabInstance:
       objectReference: {fileID: 1521446126}
     - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
       propertyPath: interactionFields.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
       propertyPath: interactionFields.Array.data[0]
@@ -7546,6 +7562,10 @@ PrefabInstance:
       propertyPath: interactionFields.Array.data[2]
       value: 
       objectReference: {fileID: 1603305247}
+    - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
+      propertyPath: interactionFields.Array.data[3]
+      value: 
+      objectReference: {fileID: 53476974}
     - target: {fileID: 6552585966845316161, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
       propertyPath: m_Name
       value: InteractionManager
@@ -7605,7 +7625,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4038175292500027902, guid: 3f20e97d333f4514f8bf5f44ea91556f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.96
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4038175292500027902, guid: 3f20e97d333f4514f8bf5f44ea91556f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7813,6 +7833,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6669755594664570430, guid: a79ee9e8295453a47b4e07b689f334e1, type: 3}
+      propertyPath: clock
+      value: 
+      objectReference: {fileID: 26205559}
     - target: {fileID: 7065379906362068619, guid: a79ee9e8295453a47b4e07b689f334e1, type: 3}
       propertyPath: m_Name
       value: Canvas

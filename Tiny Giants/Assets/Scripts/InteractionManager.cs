@@ -24,7 +24,7 @@ public class InteractionManager : MonoBehaviour
             Instance = this;
         }
         inDialogue = false;
-        canManipulate = true;
+        canManipulate = false;
     }
 
     public void Interaction0()
@@ -43,5 +43,6 @@ public class InteractionManager : MonoBehaviour
         interactionFields[2].AfterTXT();
         interactionFields[2].RandomTXT();
         hedgehog.transform.DOMoveZ(-3, 10f);
+        interactionFields[3].gameObject.SetActive(false);
     }
 }

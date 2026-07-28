@@ -8,6 +8,8 @@ public class MinigamesManager : MonoBehaviour
     public static MinigamesManager Instance;
 
     [SerializeField] private PuzzleManager puzzle1, puzzle2;
+    [SerializeField] private Sprite goodClock;
+    [SerializeField] private SpriteRenderer clock;
     private void Awake()
     {
         if (Instance == null)
@@ -43,6 +45,7 @@ public class MinigamesManager : MonoBehaviour
             case 1:
                 InteractionManager.Instance.Interaction2();
                 AudioManager.Instance.PlayAudio("alarm");
+                clock.sprite = goodClock;
                 break;
             case 2:
                 AudioManager.Instance.PlayAudio("puzzle");

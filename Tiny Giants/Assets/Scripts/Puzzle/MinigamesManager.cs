@@ -46,8 +46,11 @@ public class MinigamesManager : MonoBehaviour
                 InteractionManager.Instance.Interaction2();
                 AudioManager.Instance.PlayAudio("alarm");
                 clock.sprite = goodClock;
+                AudioManager.Instance.audioSnore.Stop();
+                AudioManager.Instance.audioSnore.enabled = false;
                 break;
             case 2:
+                PlayerManager.Instance.gnomePieces = 0;
                 AudioManager.Instance.PlayAudio("puzzle");
                 InteractionManager.Instance.inDialogue = true;
                 GnomeManager.Instance.StartLastDialogue();

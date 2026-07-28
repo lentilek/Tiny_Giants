@@ -101,7 +101,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKey(KeyCode.F))
         {
             if (other.gameObject.tag == "GnomePiece")
             {
@@ -120,6 +120,7 @@ public class PlayerManager : MonoBehaviour
             }
             else if (other.gameObject.tag == "Clock")
             {
+                other.GetComponent<BoxCollider>().enabled = false;
                 MinigamesManager.Instance.Puzzle1Open();
             }
             else if (gnomePieces == 6 && other.gameObject.tag == "Gnome")

@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
     [HideInInspector] public AudioSource audioSrc;
+    public AudioSource audioSnore;
 
     [SerializeField] private AudioClip[] steps, collect, npc, click, scale, puzzle, glowstick, alarm, snore;
 
@@ -44,19 +45,21 @@ public class AudioManager : MonoBehaviour
                 audioSrc.PlayOneShot(scale[Random.Range(0, scale.Length)], 2f); // done
                 break;
             case "puzzle":
-                audioSrc.PlayOneShot(puzzle[Random.Range(0, puzzle.Length)]);
+                audioSrc.PlayOneShot(puzzle[Random.Range(0, puzzle.Length)], .5f); // done
                 break;
             case "glowstick":
-                audioSrc.PlayOneShot(glowstick[Random.Range(0, glowstick.Length)]);
+                audioSrc.PlayOneShot(glowstick[Random.Range(0, glowstick.Length)], .2f); //done
                 break;
             case "alarm":
                 audioSrc.PlayOneShot(alarm[Random.Range(0, alarm.Length)], .5f); //done
                 break;
-            case "snore":
-                audioSrc.PlayOneShot(snore[Random.Range(0, snore.Length)]);
-                break;
             default:
                 break;
         }
+    }
+    public void Snore()
+    {
+        audioSnore.clip = snore[Random.Range(0, snore.Length)];
+        audioSnore.Play();
     }
 }

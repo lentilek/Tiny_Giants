@@ -30,6 +30,10 @@ public class InteractionField : MonoBehaviour
             {
                 StartCoroutine(End());
             }
+            if (interactionType == 3)
+            {
+                AudioManager.Instance.Snore();
+            }
         }
     }
 
@@ -38,6 +42,10 @@ public class InteractionField : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             textWindow.SetActive(false);
+            if (interactionType == 3)
+            {
+                AudioManager.Instance.audioSnore.Stop();
+            }
         }
     }
     public void InitialTXT()
@@ -83,7 +91,6 @@ public class InteractionField : MonoBehaviour
                 break;
         }
     }
-
     IEnumerator End()
     {
         yield return new WaitForSeconds(3f);

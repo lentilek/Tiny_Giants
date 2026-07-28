@@ -24,7 +24,7 @@ public class InteractionManager : MonoBehaviour
             Instance = this;
         }
         inDialogue = false;
-        canManipulate = false;
+        canManipulate = true;
     }
 
     public void Interaction0()

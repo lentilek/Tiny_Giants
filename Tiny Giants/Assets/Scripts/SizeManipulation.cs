@@ -6,7 +6,8 @@ using UnityEngine;
 public class SizeManipulation : MonoBehaviour
 {
     [SerializeField] private GameObject target;
-    [SerializeField] private float minSize, maxSize, currentSize, scale, scaleInterval;
+    [SerializeField] private float minSize, maxSize, scale, scaleInterval;
+    public float currentSize;
 
     private bool isBreak;
 

@@ -40,15 +40,30 @@ public class InteractionField : MonoBehaviour
             textWindow.SetActive(false);
         }
     }
-
+    public void InitialTXT()
+    {
+        if (state != 0)
+        {
+            state = 0;
+            RandomTXT();
+        }
+    }
     public void AfterTXT()
     {
-        state = 1;
+        if (state != 1)
+        {
+            state = 1;
+            RandomTXT();
+        }
     }
 
     public void OtherTXT()
     {
-        state = 2;
+        if (state != 2)
+        {
+            state = 2;
+            RandomTXT();
+        }
     }
 
     public void RandomTXT()

@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2657404774094879459}
+  - component: {fileID: 9096324362692396750}
   m_Layer: 0
   m_Name: Border_Tree
   m_TagString: Untagged
@@ -117,6 +118,27 @@ Transform:
   - {fileID: 7667254287306865630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &9096324362692396750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444366998680281061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.34, z: 1.34}
+  m_Center: {x: -0.17, y: 0.12, z: 0}
 --- !u!1 &8874955850396815944
 GameObject:
   m_ObjectHideFlags: 0

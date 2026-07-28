@@ -8,7 +8,7 @@ public class InteractionManager : MonoBehaviour
     public static InteractionManager Instance;
 
     [SerializeField] private InteractionField[] interactionFields;
-    [SerializeField] private GameObject gate, hedgehog;
+    [SerializeField] private GameObject gate, hedgehog, gnomeHedgehog;
     [SerializeField] private Animator hedgehogAnim;
 
     [HideInInspector] public bool inDialogue, canManipulate;
@@ -44,6 +44,7 @@ public class InteractionManager : MonoBehaviour
         interactionFields[2].AfterTXT();
         interactionFields[2].RandomTXT();
         hedgehog.GetComponentInChildren<PulsingEffect>().enabled = false;
+        gnomeHedgehog.GetComponent<BoxCollider>().enabled = true;
         hedgehogAnim.SetBool("isWalking", true);
         hedgehog.transform.DOMoveZ(-3, 40f);
         interactionFields[3].gameObject.SetActive(false);

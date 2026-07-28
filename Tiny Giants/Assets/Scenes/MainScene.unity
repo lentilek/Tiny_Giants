@@ -619,6 +619,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118419446}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &146846541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2054485286872668474, guid: 3f20e97d333f4514f8bf5f44ea91556f, type: 3}
+  m_PrefabInstance: {fileID: 7449931821089086643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4441f43239b4a6942b7e2f2d598f00a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &164837169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2577598060877192357, guid: fc465a93506b1d74d93f4af59d105d65, type: 3}
@@ -3098,6 +3109,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8980709e438f265478a8f60173dd595d, type: 3}
+--- !u!95 &857054064 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6227747659659744454, guid: 3f20e97d333f4514f8bf5f44ea91556f, type: 3}
+  m_PrefabInstance: {fileID: 7449931821089086643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &859136017
 GameObject:
   m_ObjectHideFlags: 0
@@ -7524,7 +7540,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.59
+      value: 7.441
       objectReference: {fileID: 0}
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7532,7 +7548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.33
+      value: 3.563
       objectReference: {fileID: 0}
     - target: {fileID: 3705767761187406557, guid: bf5ff287cd4c13a4fbeb52ca8084c2dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7604,8 +7620,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1521446126}
     - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
+      propertyPath: hedgehogAnim
+      value: 
+      objectReference: {fileID: 857054064}
+    - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
       propertyPath: interactionFields.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
       propertyPath: interactionFields.Array.data[0]
@@ -7623,6 +7643,10 @@ PrefabInstance:
       propertyPath: interactionFields.Array.data[3]
       value: 
       objectReference: {fileID: 53476974}
+    - target: {fileID: 5681396344511292929, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
+      propertyPath: interactionFields.Array.data[4]
+      value: 
+      objectReference: {fileID: 146846541}
     - target: {fileID: 6552585966845316161, guid: 50bd7b610a5c24f448f2448ca63a75e5, type: 3}
       propertyPath: m_Name
       value: InteractionManager
@@ -7723,6 +7747,10 @@ PrefabInstance:
     - target: {fileID: 4108887160442686807, guid: 3f20e97d333f4514f8bf5f44ea91556f, type: 3}
       propertyPath: m_Name
       value: Hedgehog
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108966829489420843, guid: 3f20e97d333f4514f8bf5f44ea91556f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7921,7 +7949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3698117350283132357, guid: 9c007943a291a87459a236d46ecd0e5c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.22
+      value: 7.52
       objectReference: {fileID: 0}
     - target: {fileID: 3698117350283132357, guid: 9c007943a291a87459a236d46ecd0e5c, type: 3}
       propertyPath: m_LocalPosition.y

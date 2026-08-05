@@ -48,6 +48,7 @@ public class MinigamesManager : MonoBehaviour
                 clock.sprite = goodClock;
                 AudioManager.Instance.audioSnore.Stop();
                 AudioManager.Instance.audioSnore.enabled = false;
+                PlayerManager.Instance.clockDone = true;
                 break;
             case 2:
                 PlayerManager.Instance.gnomePieces = 0;

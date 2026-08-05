@@ -46,8 +46,9 @@ public class InteractionManager : MonoBehaviour
         hedgehog.GetComponentInChildren<PulsingEffect>().enabled = false;
         gnomeHedgehog.GetComponent<BoxCollider>().enabled = true;
         hedgehogAnim.SetBool("isWalking", true);
-        hedgehog.transform.DOMoveZ(-3, 40f);
+        hedgehog.transform.DOMoveZ(-3.5f, 40f);
         interactionFields[3].gameObject.SetActive(false);
         interactionFields[4].gameObject.SetActive(false);
+        hedgehog.GetComponentInChildren<BoxCollider>().enabled = false;
     }
 }

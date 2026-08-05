@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float playerSpeed, stepsInterval;
     private bool isBreak;
+    [HideInInspector] public bool clockDone;
     public Vector3 playerHomePoint;
 
     [HideInInspector] public int gnomePieces;
@@ -28,6 +29,7 @@ public class PlayerManager : MonoBehaviour
             Instance = this;
         }
         isBreak = false;
+        clockDone = false;
     }
 
     private void Start()
@@ -116,11 +118,9 @@ public class PlayerManager : MonoBehaviour
             {
                 other.GetComponent<BoxCollider>().enabled = false;
                 InteractionManager.Instance.Interaction1();
-                // OpenGate()
             }
-            else if (other.gameObject.tag == "Clock")
+            else if (other.gameObject.tag == "Clock" && !clockDone)
             {
-                other.GetComponent<BoxCollider>().enabled = false;
                 MinigamesManager.Instance.Puzzle1Open();
             }
             else if (gnomePieces == 6 && other.gameObject.tag == "Gnome")

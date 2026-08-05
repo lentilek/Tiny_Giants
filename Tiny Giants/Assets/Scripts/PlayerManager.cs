@@ -36,6 +36,7 @@ public class PlayerManager : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         //gameObject.transform.position = playerHomePoint;
+        Physics.SyncTransforms();
         gnomePieces = 0;
         UIManager.Instance.UpdateGnomePieces();
     }

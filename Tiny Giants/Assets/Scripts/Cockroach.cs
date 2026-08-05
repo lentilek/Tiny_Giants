@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class Cockroach : MonoBehaviour
 {
+    public static Cockroach Instance;
+
     [SerializeField] private InteractionField cockroach, player, cockroach2, cup;
     private int part;
     [SerializeField] private string[] strings;
     private bool isWaiting;
+    public GameObject sprites;
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(Instance.gameObject);
+            Instance = this;
+        }
         part = 0;
         isWaiting = false;
         cockroach.gameObject.SetActive(false);
-        cockroach2.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
     }
     private void OnTriggerStay(Collider other)
     {
         if (!isWaiting && part == 0 && other.gameObject.tag == "Player" && Input.GetKey(KeyCode.F))
         {
+            cockroach2.gameObject.SetActive(false);
             StartCoroutine(Wait());
             InteractionManager.Instance.inDialogue = true;
             part++;
@@ -96,5 +108,9 @@ public class Cockroach : MonoBehaviour
         isWaiting = true;
         yield return new WaitForSeconds(1f);
         isWaiting = false;
+    }
+    public void InteractionEnd()
+    {
+        cockroach2.gameObject.SetActive(false);
     }
 }

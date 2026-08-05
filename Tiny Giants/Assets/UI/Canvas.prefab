@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.4
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 1
   currentSize: 0.7
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.4
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 0
   currentSize: 0.5
@@ -712,7 +712,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 76.6
+  m_Radius: 63.53
   m_Center: {x: -22.9, y: 0, z: 0}
 --- !u!1 &1259073611915876779
 GameObject:
@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.4
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 3
   currentSize: 1.15
@@ -1417,8 +1417,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 69.25
-  m_Center: {x: 15.11, y: -4.48, z: 0}
+  m_Radius: 57.8
+  m_Center: {x: 15.11, y: 1.6, z: 0}
 --- !u!1 &2498628984163282092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.4
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 5
   currentSize: 1.9
@@ -1533,7 +1533,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 33.1
+  m_Radius: 30.36
   m_Center: {x: 3.5, y: 22.4, z: 0}
 --- !u!1 &2523900518058810356
 GameObject:
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.3
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 1
   currentSize: 1.4
@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.4
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 4
   currentSize: 1.6
@@ -3165,7 +3165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.3
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 3
   currentSize: 0.5
@@ -3281,7 +3281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.3
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 0
   currentSize: 1.8
@@ -3789,7 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.3
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 2
   currentSize: 0.75
@@ -4677,7 +4677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSize: 0.4
   maxSize: 2
-  scale: 0.01
+  scale: 0.005
   scaleInterval: 0.8
   number: 2
   currentSize: 1.4
@@ -4700,7 +4700,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 62.4
+  m_Radius: 49.9
   m_Center: {x: -15.85, y: -6.36, z: 0}
 --- !u!1 &8658047898875968116
 GameObject:

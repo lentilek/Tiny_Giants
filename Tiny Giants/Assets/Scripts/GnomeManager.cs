@@ -99,6 +99,8 @@ public class GnomeManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        InteractionManager.Instance.InteractionEnd();
+        Cockroach.Instance.sprites.SetActive(false);
         gnome.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         InteractionManager.Instance.inDialogue = false;
@@ -114,6 +116,7 @@ public class GnomeManager : MonoBehaviour
         UIManager.Instance.BlackScreenIn(1f);
         yield return new WaitForSeconds(1f);
         PlayerManager.Instance.gameObject.transform.position = PlayerManager.Instance.playerHomePoint;
+        Physics.SyncTransforms();
     }
 
     IEnumerator Wait()

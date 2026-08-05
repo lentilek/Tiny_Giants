@@ -51,4 +51,10 @@ public class InteractionManager : MonoBehaviour
         interactionFields[4].gameObject.SetActive(false);
         hedgehog.GetComponentInChildren<BoxCollider>().enabled = false;
     }
+    public void InteractionEnd()
+    {
+        interactionFields[1].gameObject.SetActive(false);
+        interactionFields[5].gameObject.SetActive(true);
+        Cockroach.Instance.InteractionEnd();
+    }
 }

@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
 
     public void EndGame()
     {
+        InteractionManager.Instance.inDialogue = true;
         Time.timeScale = 0f;
         endingUI.SetActive(true);
     }

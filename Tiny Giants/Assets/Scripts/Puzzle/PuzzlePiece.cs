@@ -5,13 +5,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
-public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
+public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private bool canManipulate, canMove;
     [SerializeField] private float minSize, maxSize, scale, scaleInterval;
     public int number;
     public float currentSize = 1;
     private bool isBreak;
+
+    public bool dragOnSurfaces = true;
+    private RectTransform m_DraggingPlane;
 
     private void Awake()
     {
@@ -45,7 +48,7 @@ public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
         else
         {
-            canMove= false;
+            canMove = false;
         }
     }
 
@@ -59,16 +62,34 @@ public class PuzzlePiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         canManipulate = false;
     }
 
-    public void OnPointerMove(PointerEventData eventData)
-    {
-        if (canMove) transform.position = Input.mousePosition;
-    }
-
     IEnumerator SizeSound()
     {
         isBreak = true;
         AudioManager.Instance.PlayAudio("scale");
         yield return new WaitForSeconds(scaleInterval);
         isBreak = false;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        SetDraggedPosition(eventData);
+    }
+    private void SetDraggedPosition(PointerEventData data)
+    {
+        if (dragOnSurfaces && data.pointerEnter != null && data.pointerEnter.transform as RectTransform != null)
+            m_DraggingPlane = data.pointerEnter.transform as RectTransform;
+
+        var rt = this.GetComponent<RectTransform>();
+        Vector3 globalMousePos;
+        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
+        {
+            rt.position = globalMousePos;
+            rt.rotation = m_DraggingPlane.rotation;
+        }
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        SetDraggedPosition(eventData);
     }
 }

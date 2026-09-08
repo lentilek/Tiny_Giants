@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2933186457224548732}
   - component: {fileID: 6132755409553525308}
   - component: {fileID: 7988553661999462252}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 5229643131913685664}
   - component: {fileID: 5046912417169285338}
   - component: {fileID: 6793516702758414800}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 1901818775125185435}
   - component: {fileID: 1719351175430977133}
   - component: {fileID: 7574050531846252007}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1432,7 +1432,7 @@ GameObject:
   - component: {fileID: 2700214144446784882}
   - component: {fileID: 6632637498258052273}
   - component: {fileID: 4196293313299074889}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2266,7 +2266,7 @@ GameObject:
   - component: {fileID: 4118229408983652737}
   - component: {fileID: 5664364763972842560}
   - component: {fileID: 7733350301260743938}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2553,7 +2553,7 @@ GameObject:
   - component: {fileID: 5165034366475503404}
   - component: {fileID: 4861458827128222026}
   - component: {fileID: 8769738589016320693}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3087,7 +3087,7 @@ GameObject:
   - component: {fileID: 4411155007611990251}
   - component: {fileID: 5529680472412719092}
   - component: {fileID: 4984887207476140979}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3203,7 @@ GameObject:
   - component: {fileID: 9070293111519199321}
   - component: {fileID: 5858503440017896617}
   - component: {fileID: 3228797923207480965}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,6 +3698,7 @@ MonoBehaviour:
   puzzle2: {fileID: 8596696240312737460}
   goodClock: {fileID: 215245621, guid: 1763a2514e3a3df42b47c0a57481e63f, type: 3}
   clock: {fileID: 0}
+  currentPiece: {fileID: 0}
 --- !u!1 &6720483255646727250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,7 +3712,7 @@ GameObject:
   - component: {fileID: 6210945522657630306}
   - component: {fileID: 3217955583958910724}
   - component: {fileID: 7291211797121387889}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4599,7 +4600,7 @@ GameObject:
   - component: {fileID: 8762239698271271161}
   - component: {fileID: 5843926055644051675}
   - component: {fileID: 3794686615917282819}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: zeb (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
